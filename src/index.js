@@ -51,17 +51,23 @@ const linksRealArray = Array.from(links);
 const homeElem = linksRealArray.find(link => {
   return link.textContent === "Home";
 })
-console.log(homeElem);
+
+// const links = Array.from(document.querySelectorAll("nav a"));
 
 // 👉 3- Changing an element's text content
 //  A- Change the cat-related content into dog-related content
+logoTitle.textContent = "BloomTech Dogz";
+titleFirstCard.textContent = "Dogz RULE!"
 //  B- Have the students research online the difference between textContent and innerText
 
 
 // 👉 4- Changing any property
 //  A- Using dot notation to change a few attributes
+header
+  .querySelector("img")
+  .src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.zbrushcentral.com%2Fuploads%2Fdefault%2Foptimized%2F4X%2F0%2F7%2F9%2F0792d696b40a12ba79f5a933b5f2859b5c8d563b_2_1200x1200.jpeg"
 //  B- Using .setAttribute to change a few attributes
-
+imageFirstCard.src = "https://www.petlandkennesaw.com/wp-content/uploads/2018/08/english-bulldog-Blog13.jpg";
 
 // 👉 5- Changing the styling of an element
 //  A- By changing the class names on the element with the classList API
