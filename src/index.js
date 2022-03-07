@@ -68,19 +68,32 @@ header
   .src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.zbrushcentral.com%2Fuploads%2Fdefault%2Foptimized%2F4X%2F0%2F7%2F9%2F0792d696b40a12ba79f5a933b5f2859b5c8d563b_2_1200x1200.jpeg"
 //  B- Using .setAttribute to change a few attributes
 imageFirstCard.src = "https://www.petlandkennesaw.com/wp-content/uploads/2018/08/english-bulldog-Blog13.jpg";
+link1FirstCard.setAttribute("href", "https://www.pexels.com/search/dog/");
+link2FirstCard.href = "https://doggoipsum.com/";
+link2FirstCard.textContent = "Doggo Ipsum";
 
 // 👉 5- Changing the styling of an element
 //  A- By changing the class names on the element with the classList API
+header.classList.add("sky");
+header.classList.remove("sky");
 //  B- By manipulating inline styles on the element
+header.style.fontSize = "2em";
 
+// setInterval(() => { header.classList.toggle("sky") }, 1000)
 
 // 👉 6- Creating new elements from scratch and appending them
 // Create a new link inside the nav for "Blog"
-
+const blogLink = document.createElement("a");
+blogLink.textContent = "Blog";
+blogLink.href = "#";
+blogLink.classList.add("menu-item");
+document.querySelector("nav").appendChild(blogLink);
 
 // 👉 7- Making a copy of the card and appending it to the card group
 // DOM nodes can only exist in one spot in the DOM
 // We cannot append the same copy multiple times
+const secondCard = firstCard.cloneNode(true);
+document.querySelector(".card-group").appendChild(secondCard);
 
 
 // 👉 8- Removing an existing element and putting it back [STRETCH if time allows]
