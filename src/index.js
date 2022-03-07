@@ -32,15 +32,26 @@ const textFirstCard = firstCard.querySelector("p");
 const link1FirstCard = textFirstCard.nextElementSibling;
 const link2FirstCard = link1FirstCard.nextElementSibling;
 
-
 // 👉 2- Finding collections of elements in the DOM
 // A- Find all the anchor tags inside the nav element
 const links = document.querySelectorAll("nav a");
-console.log(links);
 // B- Loop over the links and console.log their text content
+links.forEach((link) => {
+  console.log(link.textContent);
+}) // higher order function -> function that takes another function as an argument
+/**
+ * for (let i = 0; i < links.length; i++) {
+ *   console.log(links[i]);
+ * }
+ */
 // C- Turn the collection of links into a real array
-// D- Use .filter to find the anchor tag with the textContent of "Home"
+const linksRealArray = Array.from(links);
 
+// D- Use .filter to find the anchor tag with the textContent of "Home"
+const homeElem = linksRealArray.find(link => {
+  return link.textContent === "Home";
+})
+console.log(homeElem);
 
 // 👉 3- Changing an element's text content
 //  A- Change the cat-related content into dog-related content
