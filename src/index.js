@@ -95,6 +95,41 @@ document.querySelector("nav").appendChild(blogLink);
 const secondCard = firstCard.cloneNode(true);
 document.querySelector(".card-group").appendChild(secondCard);
 
+const data =   {
+  "contact": {
+    "contact-heading" : "Contact",
+    "address" : "123 Way 456 Street Somewhere, USA",
+    "phone" : "1 (888) 888-8888",
+    "email" : "sales@greatidea.io",
+  }
+};
+
+const contactHeading = document.querySelector(".contact-heading");
+const address = document.querySelector(".address");
+
+contactHeading.textContent = data["contact"]["contact-heading"];
+address.textContent = data["contact"]["address"];
+
+/**
+ * OBJECTS!!
+ * dot notation     -> person.name = "Casey";
+ * bracket notation -> person["name"] = "Casey";
+ * const valToUpdate = "name";
+ * person[valToUpdate] = "Casey";
+ * person["first-name"];
+ */
+
+
+
+
+
+
+
+
+
+
+
+
 
 // 👉 8- Removing an existing element and putting it back [STRETCH if time allows]
 
