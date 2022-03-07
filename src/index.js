@@ -3,22 +3,40 @@
 //  Newer: querySelector, querySelectorAll
 //  Select the following single elements from the div.card
 
+// getElementById
+const elem = document.getElementById("logoTitle"); // => DOM node
+// getElementsByTagName
+const elems = document.getElementsByTagName("div"); // => DOM node list
+// getElementsByClassName
+const classElems = document.getElementsByClassName("menu-item"); // DOM node list
+
+// querySelector
+const funElem = document.querySelector(".card");
+const navElem = document.querySelector("#mainNav");
+// querySelectorAll
+const menuElems = document.querySelectorAll(".menu-item"); // DOM node list
+
 // A- finding across the entire DOM
-const header = null
-const logoTitle = null
-const firstCard = null
+const header = document.querySelector("header");
+const logoTitle = document.querySelector("#logoTitle");
+const firstCard = document.querySelector(".card:nth-of-type(1)"); // DOM node
+
+// const secondCard = document.querySelector(".card:nth-of-type(2)");
 // B- finding within one particular element
-const imageFirstCard = null
-const titleFirstCard = null
-const subtitleFirstCard = null
-const textFirstCard = null
+const imageFirstCard = firstCard.querySelector("img");
+const titleFirstCard = firstCard.querySelector("h2");
+const subtitleFirstCard = firstCard.querySelector("h3");
+const textFirstCard = firstCard.querySelector("p");
+
 // C- traversing with dot notation
-const link1FirstCard = null
-const link2FirstCard = null
+const link1FirstCard = textFirstCard.nextElementSibling;
+const link2FirstCard = link1FirstCard.nextElementSibling;
 
 
 // 👉 2- Finding collections of elements in the DOM
 // A- Find all the anchor tags inside the nav element
+const links = document.querySelectorAll("nav a");
+console.log(links);
 // B- Loop over the links and console.log their text content
 // C- Turn the collection of links into a real array
 // D- Use .filter to find the anchor tag with the textContent of "Home"
